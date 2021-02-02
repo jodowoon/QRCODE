@@ -20,19 +20,6 @@ function templateHTML(title, body, control){
   </html>
   `;
 }
-/*
-function templateList(filelist){
-  var list = '<ul>';
-  var i = 0;
-  while(i < filelist.length){
-    list = list + `<li><a href="/?id=${filelist[i]}">${filelist[i]}</a></li>`;
-    i = i + 1;
-  }
-  list = list+'</ul>';
-  return list;
-}
-*/
-
 var app = http.createServer(function(request,response){
     var _url = request.url;
     var queryData = url.parse(_url, true).query;
@@ -144,4 +131,4 @@ var app = http.createServer(function(request,response){
       response.end('먼가 잘못되었습니다!.');
     }
 });
-app.listen(8088);
+app.listen(8001);
